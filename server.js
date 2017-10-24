@@ -3,7 +3,7 @@
 // in a second terminal get node js running by entering:
 //node server.js
 
-//MONGO_URI=mongodb://localhost:27017/clementinejs
+//git add -A  git commit -m "schema and mocha unhunh"  git push origin master
 
 'use strict';
 var express = require('express');

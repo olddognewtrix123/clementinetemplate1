@@ -1,14 +1,14 @@
 const mocha = require('mocha');
 const assert = require('assert');
 
-//ES6 Promise
+//ES6 Promise  because apparently defaults are deprecated
 var mongoose = require('mongoose');
 mongoose.Promise = global.Promise;
 
 //untilizing the schema from the users.js file
 const User = require('../app/models/users');
 
-describe('some demo tests',function(){
+describe('some demo tests',function(done){
     //Create the tests with 'it' blocks
     //Remember to pass the 'done()' function! 
     it('saves a record to the ddb', function(done){

@@ -40,6 +40,4 @@ const Schema = mongoose.Schema;
 //'user' is the collection name in the database
 const User = mongoose.model('user', UserSchema);
 
-//module.exports = User;
-
 module.exports = mongoose.model('User', UserSchema);
