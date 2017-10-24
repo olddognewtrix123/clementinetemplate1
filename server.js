@@ -1,10 +1,21 @@
-'use strict';
+//start MongoDB by entering:
+//mongod --smallfiles
+// in a second terminal get node js running by entering:
+//node server.js
 
+//MONGO_URI=mongodb://localhost:27017/clementinejs
+
+'use strict';
 var express = require('express');
 var routes = require('./app/routes/index.js');
 var mongoose = require('mongoose');
 var passport = require('passport');
 var session = require('express-session');
+
+
+
+//ES6 Promise
+mongoose.Promise = global.Promise;
 
 var app = express();
 require('dotenv').load();

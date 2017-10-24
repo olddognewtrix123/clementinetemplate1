@@ -24,7 +24,7 @@ body {
 }
 
 header {
-	color: #00BCD4;
+	color: #d40d00;
 	height: 56px;
 	margin: 0 0 14px 0;
 	text-align: center;
@@ -102,14 +102,17 @@ header a ~ p {
 img {
 	margin: 0 auto;
 	display: block;
+	max-width:60px;
+  	max-height:60px;
 }
+
 
 .clementine-text { /* Styling for the Clementine.js text */
 	padding: 0;
 	margin: -25px 0 0 0;
 	font-weight: 500;
 	font-size: 60px;
-	color: #FFA000;
+	color: #d40d00;
 }
 
 /****** Click Styling ******/
@@ -202,3 +205,26 @@ span {
 	display: inline;
 	margin: 0;
 }
+
+input[type=text], select, textarea{
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  resize: vertical;
+}
+
+.credentials {
+	width:50%;
+	margin: 0 auto;
+	padding-bottom: 20px;
+}
+
+.har { 
+	width:50%;
+	margin: 0 auto;
+	height:10px;
+	background-color: #d40d00;
+}
+

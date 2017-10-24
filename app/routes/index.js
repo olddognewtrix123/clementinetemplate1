@@ -5,6 +5,7 @@ var ClickHandler = require(path + '/app/controllers/clickHandler.server.js');
 
 module.exports = function (app, passport) {
 
+	
 	function isLoggedIn (req, res, next) {
 		if (req.isAuthenticated()) {
 			return next();
@@ -25,6 +26,12 @@ module.exports = function (app, passport) {
 			res.sendFile(path + '/public/login.html');
 		});
 
+		
+	app.route('/join')
+		.get(function (req, res) {
+			res.sendFile(path + '/public/join.html');
+		});
+
 	app.route('/logout')
 		.get(function (req, res) {
 			req.logout();
@@ -41,8 +48,13 @@ module.exports = function (app, passport) {
 			res.json(req.user.github);
 		});
 
+// this is the original code
 	app.route('/auth/github')
 		.get(passport.authenticate('github'));
+// need app.route('something') that 
+//--checks for blank fields, otherwise returns a validation message
+//--checks credentials against db, otherwise returns a validation message
+// -- returns a json object of all the person's data?
 
 	app.route('/auth/github/callback')
 		.get(passport.authenticate('github', {
