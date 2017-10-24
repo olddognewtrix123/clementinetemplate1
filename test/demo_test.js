@@ -8,12 +8,10 @@ mongoose.Promise = global.Promise;
 //untilizing the schema from the users.js file
 const User = require('../app/models/users');
 
-describe('some demo tests',function(done){
-    //Create the tests with 'it' blocks
-    //Remember to pass the 'done()' function! 
-    it('saves a record to the ddb', function(done){
-        this.timeout(15000); // getting around timeout issue
-    setTimeout(done, 15000); // getting around timeout issue
+describe('some demo tests',function(){
+    
+    
+    it('saves a record to the ddb', function(){
         var user0 = new User({
             userName: 'test',
             passWord: 'password'
@@ -21,8 +19,10 @@ describe('some demo tests',function(done){
         //remember, save() is an async process so before further actions can happen the code has to know when the process has ended -- using promise methods
         user0.save().then(function(){
             assert(user0.isNew === false);
-            done();
         });
+        
+        
+        
     });
             
 });
